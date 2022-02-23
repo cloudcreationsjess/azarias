@@ -1,0 +1,462 @@
+//TEAM MEMBER----------
+
+.team_member {
+    .flex-row(space-between);
+    margin-bottom: @bl*2;
+
+    li {
+        width: calc(20% - @bl);
+
+        .lg({
+           width: calc(20% - 10px);
+        });
+
+        a {
+            .flex-column(flex-end);
+            align-items: flex-start;
+            overflow: hidden;
+            position: relative;
+            background-color: @dark-brown;
+            width: 100%;
+            height: auto;
+
+            .xl({
+
+            });
+
+            .lg({
+
+            });
+
+            .team__background-image {
+                position: relative;
+                bottom: unset;
+                left: 0;
+                right: 0;
+                margin-top: 30px;
+                .transition(150ms);
+                transition-timing-function: linear;
+
+                img {
+                    .full-width();
+                }
+
+                &::after {
+                    content: '';
+                    height: 100px;
+                    width: 100%;
+                    background: linear-gradient(180deg, rgba(46, 41, 38, 0) 0%, rgba(46, 41, 38, 1) 100%);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0px;
+                    display: block;
+                }
+
+            }
+
+            .team__hover {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(46, 41, 38, 0.5);
+                text-align: center;
+                position: absolute;
+                .transition(150ms);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    .lg({
+                       height: 60px;
+                        width: 60px;
+                    });
+                }
+            }
+
+            .team_member__content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                min-height: 147px;
+
+
+                .xl({
+                    height: 100%;
+                    width: 100%;
+                    min-height: 154px;
+                });
+
+                .lg({
+                    min-height: 93px;
+
+                });
+
+                .team__name {
+                    color: @white;
+                    font-weight: bold;
+                    font-family: @font-heading;
+                    position: relative;
+                    opacity: 1;
+                    .transition(150ms);
+                    padding: 0 @bl;
+                    margin-bottom: 10px;
+                    .font-size(23);
+                    line-height: 1.5;
+                    min-height: 69px;
+
+                    .xl({
+                       .font-size(19);
+                        min-height: 53px;
+
+                    });
+
+                    .lg({
+                        .font-size(13);
+                        line-height: 1.5;
+                        margin-bottom: 5px;
+                        padding: 0 10px;
+                        min-height: 33px;
+                    });
+                }
+
+                .team__position {
+                    font-family: @font-normal;
+                    position: relative;
+                    opacity: 1;
+                    .transition(150ms);
+                    padding: 0 @bl;
+                    margin-bottom: 15px;
+                    .font-size(16);
+                    line-height: 1.5;
+
+                    .lg({
+                        .font-size(12);
+                        line-height: 20px;
+                        padding: 0 10px;
+                    });
+                }
+            }
+
+
+        }
+
+        &:hover {
+
+            .team__background-image {
+                transform: scale(1.1);
+
+            }
+
+            .team__hover {
+                opacity: 1;
+            }
+
+            .team__position {
+                opacity: 0;
+            }
+
+            .team__name {
+                opacity: 0;
+            }
+
+        }
+    }
+
+}
+
+//TEAM-PROFILE ---extended profile
+
+.team-profile {
+    position: relative;
+    margin-bottom: @bl*4;
+
+    .lg({
+        margin-bottom: @bl*2;
+    });
+
+    .md({
+        margin-bottom: 0;
+    });
+
+    .team-profile__left {
+
+        .md({
+            margin-bottom: @bl*2;
+        });
+
+        .sm({
+            margin-bottom: @bl;
+        });
+
+        .team-profile__left__picture {
+
+            margin-bottom: 20px;
+            position: relative;
+
+            .md({
+                max-width: 55%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: @bl*2;
+            });
+
+            .xs({
+               max-width: 65%;
+            });
+        }
+
+        .team-profile__left__picture__box {
+            height: 85%;
+            width: 100%;
+            background-color: @teal;
+            position: absolute;
+            bottom: 2px;
+            lefT: 0;
+
+        }
+
+        img {
+            .full-width();
+            position: relative;
+        }
+
+        .team-profile__left__name {
+            .flex-row(space-between);
+            align-items: center;
+            .font-size(26);
+            line-height: 1.5;
+            color: @orange;
+            font-family: @font-heading;
+
+            .xl({
+                .font-size(26);
+                line-height: 1.5;
+                margin-bottom: 5px;
+            });
+
+            .md({
+                .font-size(26);
+                max-width: 55%;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: flex-start;
+
+                a {
+                    margin-top: 3px;
+                }
+            });
+
+            .sm({
+                .font-size(19);
+                margin-bottom: 0;
+            });
+
+            .xs({
+               max-width: 65%;
+            });
+
+            a {
+                height: 34px;
+                width: 34px;
+
+                .lg({
+                    width: 30px;
+                    height: 30px;
+                });
+
+                .xs({
+                    width: 23px;
+                    height: auto;
+                });
+
+                &:hover {
+                    opacity: 0.75;
+                }
+
+            }
+        }
+
+        .team-profile__left__position {
+            .font-size(18);
+            line-height: 1.5;
+            color: @dark-green;
+
+            .xl({
+                .font-size(16);
+                line-height: 1.5
+            });
+
+            .md({
+                .font-size(20);
+                max-width: 55%;
+                margin-left: auto;
+                margin-right: auto;
+            });
+
+            .sm({
+                .font-size(12);
+            });
+
+            .xs({
+                max-width: 65%;
+
+            })
+        }
+    }
+
+    .team-profile__right {
+        margin-left: @bl*4;
+
+        .md({
+            margin-left: 0;
+        });
+
+        .team-profile__right__btn {
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: none;
+            color: @teal;
+            font-weight: bold;
+            .font-size(20);
+            .transition();
+            margin-bottom: @bl*2;
+
+            .md({
+               .font-size(18);
+            });
+
+            .sm({
+                margin-top: @bl;
+            });
+
+            .xs({
+                .font-size(16);
+                margin-bottom: @bl;
+            });
+
+            &:hover {
+                opacity: 0.75;
+                cursor: pointer;
+
+            }
+
+        }
+
+        // make profile details visible on mobile with see more btn
+
+        .team-profile__right__title, .team-profile__right__details {
+            .transition(200);
+
+            &.visible {
+                opacity: 1!important;
+                display: block;
+            }
+
+        }
+
+        /////////////////////////////////
+
+        .team-profile__right__title {
+            .font-size(34);
+            line-height: 1.5;
+            color: @teal;
+            margin-bottom: @bl*3;
+            font-family: @font-heading;
+
+            .xl({
+                .font-size(32);
+                line-height: 1.2;
+                margin-bottom: @bl*2;
+            });
+
+            .lg({
+                .font-size(26);
+            });
+
+
+            .md({
+                opacity: 0;
+                display: none;
+            });
+
+            .sm({
+                .font-size(20);
+                line-height: 1.5;
+                margin-bottom: @bl;
+            });
+        }
+
+        .team-profile__right__details {
+            .transition();
+
+            .md({
+                opacity: 0;
+                display: none;
+            });
+
+            p {
+                .font-size(16);
+                line-height: 1.75;
+                color: @dark-green;
+
+                .xl({
+                    .font-size(16);
+                    line-height: 1.5;
+                });
+
+                .lg({
+                   .font-size(15);
+                });
+
+                .sm({
+                    .font-size(14);
+                });
+            }
+        }
+
+    }
+
+}
+
+.page-id-18 {
+    #team_member_profile__daren-c-heitman-cfa {
+        .md({
+           padding-top: @bl*5;
+        });
+
+        .xs({
+            padding-top: @bl*4;
+        });
+    }
+
+    .section-one-circle {
+        .md({
+           height: auto;
+            min-height: unset;
+            padding-top: @bl*4;
+            padding-bottom: @bl*4;
+
+        });
+
+        .sm({
+            padding-top: @bl*2;
+        });
+
+        .xs({
+            padding-bottom: 0;
+        });
+    }
+
+    #team_member_profile__colleen-kelly {
+        .xs({
+            padding-bottom: @bl*4;
+        });
+    }
+}
+
+

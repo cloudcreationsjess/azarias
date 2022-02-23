@@ -1,0 +1,56 @@
+/***********************************************************************/
+/*********** 404 *******************************************************/
+/***********************************************************************/
+.error404 {
+    #header {
+        background-color: @teal;
+    }
+
+    footer {
+        min-height: 130px;
+        .scroll-to-top {
+            display: none;
+        }
+    }
+}
+
+#error404 {
+    .full-page();
+    min-height: calc(100vh - 130px);
+    .splash-padding();
+    .flex-column();
+    text-align: center;
+    position: relative;
+    color: @teal;
+
+    .sm({
+        padding-top: 170px;
+        padding-bottom: 150px;
+    });
+
+    .error404__text-404 {
+        font-family: @font-heading;
+        .font-size(280);
+        line-height: 1;
+        color: @dark-grey;
+        opacity: 0.2;
+        position: absolute;
+        bottom: -20px;
+        right: @bl*2;
+    }
+
+    h1, h2 {
+        color: @teal;
+    }
+
+    .btn--secondary {
+        min-width: 150px;
+        background-color: @white;
+
+        &:hover {
+            color: @white;
+            background-color: @teal;
+        }
+    }
+}
+

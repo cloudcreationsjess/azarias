@@ -1,0 +1,107 @@
+/***********************************************************************/
+/* FOOTER
+/*
+/* Footer styles.
+/***********************************************************************/
+.content-info {
+    background-color: @footer-color;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: @bl*2 0;
+    font-weight: lighter;
+
+    .footer-left {
+        .flex-row(flex-start);
+
+        .md({
+            margin-bottom: @bl;
+        });
+
+        img {
+            width: 65%;
+
+            .xs({
+               width: 100%;
+            });
+        }
+    }
+
+    .footer-right {
+        .flex-row(flex-end);
+
+        .md({
+            justify-content: space-between;
+        });
+
+        .mjhudson {
+            margin-left: @bl*3;
+
+            .lg({
+                margin-left: @bl;
+            });
+        }
+
+        .copyright {
+            line-height: 1.5;
+            .font-size(14);
+
+            .md({
+               .font-size(12);
+            });
+
+            .xs({
+                .font-size(10);
+            });
+        }
+    }
+
+    .scroll-to-top {
+        svg {
+            width: 75px;
+            height: 75px;
+            transform: rotate(180deg);
+
+            .lg({
+                width: 60px;
+                height: 60px;
+            });
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+}
+
+//privacy policy and terms of use page
+
+.page-id-370, .page-id-372 {
+    .header {
+        background-color: @teal;
+    }
+    .blank {
+        .splash-padding();
+
+        .scroll-to-next-btn {
+            display: none!important;
+        }
+
+        .title {
+            p {
+                .font-size(24);
+                font-weight: bold;
+                margin-bottom: @bl*2;
+            }
+        }
+    }
+    .blank * {
+        color: @dark-grey!important;
+    }
+
+    .page-navigation {
+        display: none!important;
+    }
+
+}

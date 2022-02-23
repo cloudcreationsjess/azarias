@@ -1,0 +1,299 @@
+/***********************************************************************/
+/*********** CONTACT PAGE **********************************************/
+/***********************************************************************/
+
+/***********************************************************************/
+/*** CONTACT FORM 7 ****************************************************/
+/***********************************************************************/
+.contact-page {
+    padding-bottom: 0;
+
+    iframe {
+        margin-top: @bl*4;
+        width: 100%;
+        height: 100vh;
+
+        .md({
+            margin-top: 0;
+        });
+    }
+
+    .btn--secondary {
+        background-color: @white;
+
+        &:hover {
+            background-color: @teal;
+        }
+    }
+
+    .contact-page__contact-form {
+        border-right: 1px solid @teal;
+        padding-right: @bl*3;
+        margin-bottom: @bl*4;
+
+        .md({
+            border-right: none;
+            padding-right: 0;
+        });
+
+        h2 {
+            color: @teal;
+            .font-size(34);
+            line-height: 1.5;
+            margin-bottom: @bl*2;
+        }
+
+        label {
+            .font-size(18);
+            line-height: 1.5;
+            color: @teal;
+            font-family: @font-normal;
+        }
+    }
+
+    .contact-page__right__logo {
+        padding: @bl*3;
+        background-color: @teal;
+        width: 100%;
+        border-bottom: 1px solid #FFFFFF75;
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .md({
+            max-width: none;
+            padding: @bl*2 0;
+        });
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+
+        .contact-page__right__logo__image {
+            margin-left: auto;
+            margin-right: auto;
+
+            .lg({
+                max-width: 720px;
+                padding: 0 30px;
+            });
+
+            .sm({
+                max-width: 540px;
+
+            });
+
+            img {
+                max-width: 438px;
+                margin-left: auto;
+                margin-right: auto;
+                width: auto;
+                height: 100%;
+
+            }
+        }
+
+    }
+
+    .contact-page__right {
+
+        background-color: @teal;
+        padding: @bl*2 @bl*3;
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: @bl*4;
+        height: 65%;
+
+        .md({
+            max-width: none;
+            width: 100%;
+            margin-bottom: 0;
+            padding: @bl*2 0;
+
+        });
+
+        .contact-page__right__address, .contact-page__right__email, .contact-page__right__phone, .contact-page__right__social {
+
+            .lg({
+                max-width: 720px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px 30px;
+            });
+
+            .md({
+                max-width: 720px;
+
+            });
+
+            .sm({
+                max-width: 540px;
+
+            });
+        }
+
+        .contact-page__right__address--label, .contact-page__right__phone--label, .contact-page__right__email--label, .contact-page__right__social__links {
+            .flex-row(flex-start);
+
+            p, a {
+                margin-left: 10px;
+                font-family: @font-heading;
+                .font-size(18);
+                line-height: 20px;
+                opacity: 1;
+                margin-bottom: 0;
+
+                .lg({
+                    margin-top: 0;
+                });
+
+            }
+
+        }
+
+        .contact-page__right__social__links {
+
+            .twitter-link, .linkedin-link {
+
+                a {
+                    margin-left: 0;
+                }
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+
+            .twitter-link {
+                margin-right: 10px;
+            }
+        }
+
+        p, a {
+            opacity: 0.75;
+            .font-size(18);
+            margin-top: 10px;
+            font-weight: lighter;
+            line-height: 1.5;
+        }
+
+        .contact-page__right__phone, .contact-page__right__address {
+            margin-bottom: @bl;
+
+            .contact-page__right__phone--label, .contact-page__right__address--label {
+                margin-bottom: @bl;
+
+                .md({
+                    margin-bottom: 10px;
+                });
+            }
+
+            .contact-page__right__address--label {
+                a {
+                    .md({
+                        margin-bottom: 0;
+                    });
+                }
+            }
+
+        }
+
+        .contact-page__right__email {
+            margin-bottom: @bl*2;
+
+            a {
+                &:hover {
+                    color: @orange;
+                }
+            }
+
+            .contact-page__right__email--label--name {
+                font-family: @font-heading;
+                opacity: 1;
+                margin-bottom: 0;
+            }
+
+            .contact-page__right__email--label--job {
+                .font-size(14);
+                opacity: 1;
+                margin-top: 0;
+            }
+        }
+
+    }
+}
+
+.wpcf7-form-control-wrap {
+
+    input, textarea {
+        border-bottom: 1px solid @teal;
+        padding: 0;
+        color: @dark-grey;
+        .transition();
+
+        &::placeholder {
+            color: @light-grey !important;
+            font-weight: lighter;
+        }
+    }
+
+    input:focus, textarea:focus {
+        //border-bottom: 1px solid @orange;
+        background-color: #01636050 !important;
+        color: @white;
+        padding: 5px;
+    }
+
+}
+
+.wpcf7-not-valid-tip {
+
+}
+
+.wpcf7-response-output {
+    color: @grey;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: none;
+    max-width: 475px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff1000+0,e25600+100 */
+    background: rgb(255, 16, 0); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(255, 16, 0, 1) 0%, rgba(226, 86, 0, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255, 16, 0, 1) 0%, rgba(226, 86, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255, 16, 0, 1) 0%, rgba(226, 86, 0, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1000', endColorstr='#e25600',GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    color: @grey;
+    margin: @baseline*2 auto 0px auto;
+    .font-size(13);
+    padding: @baseline;
+    .transition();
+
+    &:before {
+        content: "\f071";
+        font-family: @font-awesome;
+        .font-size(13);
+        padding-right: @baseline;
+    }
+}
+
+div.wpcf7-mail-sent-ok {
+    border: none;
+    max-width: 475px;
+    color: @white !important;
+    margin: @baseline*2 auto 0px auto;
+    .font-size(13);
+    padding: @baseline;
+    .transition();
+
+    &:before {
+        content: "\f058";
+        font-family: @font-awesome;
+        .font-size(13);
+        padding-right: @baseline;
+    }
+
+}
+
+

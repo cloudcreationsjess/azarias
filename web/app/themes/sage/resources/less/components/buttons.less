@@ -1,0 +1,150 @@
+/***********************************************************************/
+/******** BUTTONS ******************************************************/
+/***********************************************************************/
+button:focus {outline: 0 !important;}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .font-size(16);
+    line-height: 1.5;
+    font-weight: lighter;
+    text-transform: none;
+    background-color: transparent;
+    letter-spacing: 0px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px 15px;
+    .transition();
+    .appearance();
+
+    .lg({
+        .font-size(16);
+    });
+
+    &:hover, &:active, &:not(:disabled):not(.disabled):active {
+        outline: 0;
+        cursor: pointer;
+    }
+}
+
+.btn--icon-right {
+    i, svg {
+        margin-left: @baseline*0.5;
+    }
+}
+
+.btn--icon-left {
+    i, svg {
+        margin-right: @baseline*0.5;
+    }
+}
+
+/* Primary Button */
+.btn--primary, .btn--primary:visited {
+    height: 60px;
+    width: 30%;
+    line-height: 60px;
+    background-color: transparent;
+    border: 1px solid @white;
+    color: @white;
+    box-shadow: none;
+
+    .lg({
+        height: 50px;
+        line-height: 50px;
+    });
+
+    .md({
+        width: 50%;
+    });
+
+    .xs({
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        .font-size(14);
+    });
+
+    /* Hover */
+
+    &:hover, &:active, &:not(:disabled):not(.disabled):active {
+        background-color: @white;
+        color: @teal;
+        .box-shadow();
+    }
+
+    /* Click */
+
+    &:focus {
+        border: 1px solid @white;
+        background-color: @white;
+        color: @teal;
+        box-shadow: none;
+    }
+}
+
+.btn--secondary, .btn--secondary:visited {
+    height: 50px;
+    line-height: 50px;
+    width: 35%;
+    background-color: @light-blue;
+    border: 1px solid @teal;
+    color: @teal;
+    box-shadow: none;
+
+    /* Hover */
+
+    &:hover, &:active, &:not(:disabled):not(.disabled):active {
+        border: 1px solid @teal;
+        color: @white;
+        background-color: @teal;
+        .box-shadow();
+    }
+
+    /* Click */
+
+    &:focus {
+        border: 1px solid @teal;
+        background-color: @teal;
+        color: @white;
+        box-shadow: none;
+    }
+}
+
+// Scroll to next button
+
+.scroll-to-next-btn {
+    position: absolute;
+    bottom: @bl;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border-radius: 50%;
+
+    &:hover {
+
+        svg {
+            transform: translateY(5px);
+
+        }
+    }
+
+    svg {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        .transition();
+
+        .lg({
+            width: 60px;
+            height: 60px;
+        });
+    }
+}
+
